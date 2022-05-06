@@ -1,12 +1,22 @@
-# ʕ◉ϖ◉ʔ longgopher
+<div align="center">
+
+# longgopher
 
 *looooooooooooooooooooong gopher!*
 
-## What's this?
+</div>
 
-A command to show long long gopher on your terminal!
+## 🤔 What's this?
 
-## Usage
+A command to show long gopher on your terminal! Inspired by: [mattn/longcat](github.com/mattn/longcat) 😺
+
+<div align="center">
+
+![longgopher](https://user-images.githubusercontent.com/62412884/167123737-f10d4292-ad13-4e90-a293-56106fb77a6f.png)
+
+</div>
+
+## 💻 Usage
 
 ```
 Usage of longgopher:
@@ -14,17 +24,27 @@ Usage of longgopher:
         length (default 10)
 ```
 
-## Installation
+## ⬇️ Installation
 
 ```
 go get github.com/sheepla/longgopher@latest
 ```
 
-## License
+## 🌲 Derived Projects
 
-MIT
+- [syumai/longify](https://github.com/syumai/longify): A command to output longified any ascii art
+- [arrow2nd/longdeno](https://github.com/arrow2nd/longdeno): Looooooooooooooooooooooooooooooooooooooooooooooong [Deno](https://deno.land)
 
-## Author
+## 📔 License
 
-Sheepla
+[MIT](./LICENSE)
+
+## 🐑 Author
+
+[Sheepla](https://github.com/sheepla)
+
+
+## 🙋 Contributing
+
+Welcome! Welcome!
 
