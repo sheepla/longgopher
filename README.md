@@ -8,7 +8,7 @@
 
 ## 🤔 What's this?
 
-A command to show long gopher on your terminal! Inspired by: [mattn/longcat](github.com/mattn/longcat) 😺
+A command to show long gopher on your terminal! Inspired by: [mattn/longcat](https://github.com/mattn/longcat) 😺
 
 <div align="center">
 
@@ -32,8 +32,8 @@ go get github.com/sheepla/longgopher@latest
 
 ## 🌲 Derived Projects
 
-- [syumai/longify](https://github.com/syumai/longify): A command to output longified any ascii art
-- [arrow2nd/longdeno](https://github.com/arrow2nd/longdeno): Looooooooooooooooooooooooooooooooooooooooooooooong [Deno](https://deno.land)
+- 🐮 [syumai/longify](https://github.com/syumai/longify): A command to output longified any ascii art
+- 🦕 [arrow2nd/longdeno](https://github.com/arrow2nd/longdeno): Looooooooooooooooooooooooooooooooooooooooooooooong [Deno](https://deno.land)
 
 ## 📔 License
 
