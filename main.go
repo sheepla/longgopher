@@ -5,28 +5,35 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 
 	color "github.com/fatih/color"
 )
 
-var cyan = color.New(color.Bold, color.FgHiCyan)
+type asciiArt string
 
 var (
-	head = cyan.Sprint(`
-         ,_---~~~~~----._         
-  _,,_,*^____      _____\\*g*\"*, 
- / __/ /'     ^.  /      \ ^@q   f
-[  @f | @))    |  | @))   l  0 _/  
- \*/   \~____ / __ \_____/    \   
-  |           _l__l_           I   
-  }          [______]          I  
-  ]            | | |           |  
-  ]             ~ ~            |  
-  |                            |   
-`,
-	)
-	body = cyan.Sprint(`  |                            |   `)
-	leg  = cyan.Sprint(`  (_///).,______________(_//.,_)   `)
+	head asciiArt = `
+      CCCCCCCCCCCCCCCCCCCCCC      
+ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC, 
+CCCCCCCCWWWWWWWCCCCWWWWWWWCCCCCCCC
+CCCCCCWWBBWWWWWWCCWWBBWWWWCCCCCCC  
+ CCCCCCWBBWWWWWCCCCWBBWWWWCCCCC   
+   CCCCCCCCCCCCBBBBCCCCCCCCCCCCC   
+  CCCCCCCCCCCYYYYYYYYCCCCCCCCCCC  
+  CCCCCCCCCCCCCWWWWWCCCCCCCCCCCC  
+ YYYYCCCCCCCCCCCWWWCCCCCCCCCYYYYY
+ YYYYCCCCCCCCCCCCCCCCCCCCCCCYYYYY  
+`
+	body asciiArt = `  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC   `
+	leg  asciiArt = ` YYYYYYYCCCCCCCCCCCCCCCCYYYYYYYYY  `
+)
+
+var (
+	cyan   = color.New(color.Bold, color.FgHiCyan)
+	black  = color.New(color.Bold, color.FgHiBlack)
+	white  = color.New(color.Bold, color.FgHiWhite)
+	yellow = color.New(color.Bold, color.FgHiYellow)
 )
 
 var stdout = bufio.NewWriter(os.Stdout)
@@ -40,10 +47,24 @@ func main() {
 }
 
 func printGopher(length int) {
-	fmt.Fprint(stdout, head)
+	h := head.Colorize('C', cyan).Colorize('W', white).Colorize('B', black).Colorize('Y', yellow)
+	b := body.Colorize('C', cyan)
+	l := leg.Colorize('C', cyan).Colorize('Y', yellow)
+
+	fmt.Fprint(stdout, h)
 	for i := 0; i < length; i++ {
-		fmt.Fprintln(stdout, body)
+		fmt.Fprintln(stdout, b)
 	}
-	fmt.Fprintln(stdout, leg)
+	fmt.Fprintln(stdout, l)
 	stdout.Flush()
+}
+
+func (a asciiArt) Colorize(char rune, color *color.Color) asciiArt {
+	str := strings.Replace(
+		string(a),
+		string(char),
+		color.Sprint("#"),
+		-1,
+	)
+	return asciiArt(str)
 }
