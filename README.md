@@ -12,7 +12,7 @@ A command to show long gopher on your terminal! Inspired by: [mattn/longcat](htt
 
 <div align="center">
 
-![longgopher](https://user-images.githubusercontent.com/62412884/167123737-f10d4292-ad13-4e90-a293-56106fb77a6f.png)
+![longgopher](https://user-images.githubusercontent.com/62412884/167132816-899fd76f-1678-4c0b-bda7-8999959f764d.png)
 
 </div>
 
