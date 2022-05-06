@@ -10,6 +10,12 @@ import (
 	color "github.com/fatih/color"
 )
 
+var (
+	appVersion   = "unknown"
+	appRevision  = "unknown"
+	appBuildDate = "unknown"
+)
+
 type asciiArt string
 
 const (
@@ -39,11 +45,19 @@ var (
 
 var stdout = bufio.NewWriter(os.Stdout)
 
-var length int
+var (
+	length  int
+	version bool
+)
 
 func main() {
-	flag.IntVar(&length, "l", 10, "length")
+	flag.IntVar(&length, "l", 10, "length of gopher's body")
+	flag.BoolVar(&version, "V", false, "show version")
 	flag.Parse()
+	if version {
+		fmt.Printf("v%s-%s\nBuild at %s\n", appVersion, appRevision, appBuildDate)
+		return
+	}
 	printGopher(length)
 }
 
