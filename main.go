@@ -18,8 +18,15 @@ var (
 
 type asciiArt string
 
-const (
-	head asciiArt = `
+type gopherAsciiArt struct {
+	Head asciiArt
+	Body asciiArt
+	Leg  asciiArt
+}
+
+var gopher = gopherAsciiArt{
+	// height: 11
+	Head: `
       CCCCCCCCCCCCCCCCCCCCCC      
  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC, 
 CCCCCCCCWWWWWWWCCCCWWWWWWWCCCCCCCC
@@ -30,11 +37,13 @@ CCCCCCWWBBWWWWWWCCWWBBWWWWCCCCCCC
   CCCCCCCCCCCCCWWWWWCCCCCCCCCCCC  
  YYYYYCCCCCCCCCCWWWCCCCCCCCCYYYYY
  YYYYYCCCCCCCCCCCCCCCCCCCCCCYYYYY  
-`
-	body asciiArt = `  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC   `
-	leg  asciiArt = ` YYYYYYCCCCCCCCCCCCCCCCCCCYYYYYYY   
-  YYYYYCCCCCCCCCCCCCCCCCCCYYYYYY   `
-)
+`,
+	Body: `  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC   `,
+
+	// height: 2
+	Leg: ` YYYYYYCCCCCCCCCCCCCCCCCCCYYYYYYY   
+  YYYYYCCCCCCCCCCCCCCCCCCCYYYYYY   `,
+}
 
 var (
 	cyan   = color.New(color.Bold, color.FgHiCyan)
@@ -62,15 +71,15 @@ func main() {
 }
 
 func printGopher(length int) {
-	h := head.Colorize('C', cyan).Colorize('W', white).Colorize('B', black).Colorize('Y', yellow)
-	b := body.Colorize('C', cyan)
-	l := leg.Colorize('C', cyan).Colorize('Y', yellow)
+	head := gopher.Head.Colorize('C', cyan).Colorize('W', white).Colorize('B', black).Colorize('Y', yellow)
+	body := gopher.Body.Colorize('C', cyan)
+	leg := gopher.Leg.Colorize('C', cyan).Colorize('Y', yellow)
 
-	fmt.Fprint(stdout, h)
+	fmt.Fprint(stdout, head)
 	for i := 0; i < length; i++ {
-		fmt.Fprintln(stdout, b)
+		fmt.Fprintln(stdout, body)
 	}
-	fmt.Fprintln(stdout, l)
+	fmt.Fprintln(stdout, leg)
 	stdout.Flush()
 }
 
