@@ -12,7 +12,7 @@ import (
 
 type asciiArt string
 
-var (
+const (
 	head asciiArt = `
       CCCCCCCCCCCCCCCCCCCCCC      
  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC, 
