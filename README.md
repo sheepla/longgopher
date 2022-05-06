@@ -20,14 +20,23 @@ A command to show long gopher on your terminal! Inspired by: [mattn/longcat](htt
 
 ```
 Usage of longgopher:
+  -V    show version
   -l int
-        length (default 10)
+        length of gopher's body (default 10)
 ```
 
 ## ⬇️ Installation
 
+### Download Binary
+
+You can download binary from the release page.
+
+> [Latest Release](https://github.com/sheepla/longgopher/releases/latest)
+
+### Build From Source
+
 ```
-go get github.com/sheepla/longgopher@latest
+go install github.com/sheepla/longgopher@latest
 ```
 
 ## 🌲 Derived Projects
