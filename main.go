@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"os"
 	"strings"
 
 	color "github.com/fatih/color"
@@ -52,7 +51,7 @@ var (
 	yellow = color.New(color.Bold, color.FgHiYellow)
 )
 
-var stdout = bufio.NewWriter(os.Stdout)
+var stdout = bufio.NewWriter(color.Output)
 
 var (
 	length  int
