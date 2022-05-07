@@ -43,6 +43,7 @@ go install github.com/sheepla/longgopher@latest
 
 - 🐮 [syumai/longify](https://github.com/syumai/longify): A command to output longified any ascii art
 - 🦕 [arrow2nd/longdeno](https://github.com/arrow2nd/longdeno): Looooooooooooooooooooooooooooooooooooooooooooooong [Deno](https://deno.land)
+- 🦀 [ikanago/longferris](https://github.com/ikanago/longferris): Long [Ferris](https://github.com/ciusji/ferris) written in Rust
 
 ## 📔 License
 
