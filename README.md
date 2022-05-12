@@ -45,6 +45,7 @@ go install github.com/sheepla/longgopher@latest
 - 🦕 [arrow2nd/longdeno](https://github.com/arrow2nd/longdeno): Looooooooooooooooooooooooooooooooooooooooooooooong [Deno](https://deno.land)
 - 🦀 [ikanago/longferris](https://github.com/ikanago/longferris): Long [Ferris](https://github.com/ciusji/ferris) written in Rust
 - 🐍 [4513ECHO/longpython](https://github.com/4513ECHO/longpython): CLI tool to print long python
+- 🌊 [koutarn/longlongC](https://github.com/koutarn/longlongC): long long C written in C
 
 ## 📔 License
 
