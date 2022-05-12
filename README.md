@@ -47,6 +47,8 @@ go install github.com/sheepla/longgopher@latest
 - 🐍 [4513ECHO/longpython](https://github.com/4513ECHO/longpython): CLI tool to print long python
 - 🌊 [koutarn/longlongC](https://github.com/koutarn/longlongC): long long C written in C
 
+*I'm looking forward to many derivative projects being created!*
+
 ## 📔 License
 
 [MIT](./LICENSE)
