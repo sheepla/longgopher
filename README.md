@@ -46,6 +46,7 @@ go install github.com/sheepla/longgopher@latest
 - 🦀 [ikanago/longferris](https://github.com/ikanago/longferris): Long [Ferris](https://github.com/ciusji/ferris) written in Rust
 - 🐍 [4513ECHO/longpython](https://github.com/4513ECHO/longpython): CLI tool to print long python
 - 🌊 [koutarn/longlongC](https://github.com/koutarn/longlongC): long long C written in C
+- ➕ [ma-tw/longcpp](https://github.com/ma-tw/longcpp): long long C++ written in C++
 
 *I'm looking forward to many derivative projects being created!*
 
